@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout — FloraBloom</title>
+  <title>Checkout — FloraGuard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -461,9 +461,9 @@
       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
     </div>
     <div class="success-title">Thank you for<br>your <em>order</em></div>
-    <p class="success-body">Your FloraBloom is on its way. You'll receive a confirmation email shortly with your tracking details.</p>
+    <p class="success-body">Your FloraGuard is on its way. You'll receive a confirmation email shortly with your tracking details.</p>
     <div class="success-ref" id="order-ref"></div>
-    <a href="index.html" class="back-home">Back to FloraBloom</a>
+    <a href="index.html" class="back-home">Back to FloraGuard</a>
   </div>
 
   <!-- Checkout Layout -->
@@ -634,9 +634,9 @@
     // ── CONFIGURABLE BLOCK ──
     const CART = [
       // Update prices and variants to match your actual product setup
-      { id: 'fb-1m', name: 'FloraBloom', desc: '1 Month Supply · 30 Capsules', price: 3900, qty: 1 },
-      { id: 'fb-3m', name: 'FloraBloom', desc: '3 Month Supply · 90 Capsules', price: 9900, was: 11700, qty: 1 },
-      { id: 'fb-6m', name: 'FloraBloom', desc: '6 Month Supply · 180 Capsules', price: 17900, was: 23400, qty: 1 },
+      { id: 'fb-1m', name: 'FloraGuard', desc: '1 Month Supply · 30 Capsules', price: 3900, qty: 1 },
+      { id: 'fb-3m', name: 'FloraGuard', desc: '3 Month Supply · 90 Capsules', price: 9900, was: 11700, qty: 1 },
+      { id: 'fb-6m', name: 'FloraGuard', desc: '6 Month Supply · 180 Capsules', price: 17900, was: 23400, qty: 1 },
     ];
     const WEBHOOK_URL = ''; // Paste your order endpoint here
     const PROMOS = {
@@ -651,7 +651,7 @@
     let discountLabel = '';
 
     function fmt(pence) {
-      return '£' + (pence / 100).toFixed(2).replace(/\.00$/, '');
+      return '€' + (pence / 100).toFixed(2).replace(/\.00$/, '');
     }
 
     function renderCart() {
