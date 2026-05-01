@@ -143,10 +143,27 @@
       animation: fadeUp 0.9s ease both;
     }
     .botanical-wrap {
-      width: 240px;
-      height: 240px;
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 auto 24px;
+      min-height: 280px;
+    }
+    .botanical-bg {
+      position: absolute;
+      width: 280px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .bottle-img {
+      height: 280px;
+      position: relative;
+      z-index: 1;
+      object-fit: contain;
       animation: float 7s ease-in-out infinite;
+      filter: drop-shadow(0 16px 32px rgba(168,93,111,0.22));
     }
     .panel-badge {
       display: inline-flex;
@@ -701,11 +718,9 @@
     <!-- ── STICKY LEFT PANEL ── -->
     <div class="panel">
       <div class="panel-inner">
-        <div class="panel-badge">Clinically studied strains</div>
-
-        <!-- Botanical SVG -->
+        <!-- Bottle + botanical background -->
         <div class="botanical-wrap">
-          <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="botanical-bg" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Outer dashed orbit -->
             <circle cx="120" cy="120" r="96" stroke="#C97B8C" stroke-width="0.6" stroke-dasharray="3 9" opacity="0.28" fill="none"/>
 
@@ -762,8 +777,10 @@
             <circle cx="96"  cy="220" r="2"   fill="#C97B8C" opacity="0.28"/>
             <circle cx="152" cy="216" r="2.5" fill="#C97B8C" opacity="0.22"/>
           </svg>
+          <img src="bottle.png" alt="FloraGuard Vaginal Probiotic" class="bottle-img">
         </div>
 
+        <div class="panel-badge">Clinically studied strains</div>
         <div class="panel-name">FloraGuard</div>
         <div class="panel-sub">Vaginal Probiotic</div>
         <div class="panel-rule"></div>
